@@ -1,0 +1,99 @@
+//*-------------header----------------------------------------------------------------
+.header {
+    min-height: 91px;
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__column {
+        display: flex; 
+    }
+
+    &__logo {
+        padding: 13px 0px 38px 0px;
+    }
+
+    &__menu {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.menu-header {
+    height: 100%;
+    align-items: center;
+    display: flex;
+    &__links{
+        display: flex;
+        margin: 0px 60px 0px 0px;
+        li{
+            &:not(:last-child){
+                margin: 0px 40px 0px 0px;
+            }
+        }
+    }
+    &__link {
+        font-size: 12px;
+        line-height: 143%;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #6C6C6C;
+    }
+    &__basket{
+        position: relative;
+        &::before{
+            content:'';
+            background: #EBEBEB;
+            position: absolute;
+            width:1px;
+            height:38px;
+            top:50%;
+            transform: translateY(-50%);
+            left:-41px;
+            transition: all 0.5s ease 0s;
+            }
+            &:hover{
+                &::before{
+                    transform: translateY(0);
+                    background: #797171;
+                    height: 50px;
+                    transform: translateX(-50%) rotate(-90deg);
+                    left:30%;
+                    top:0;            
+                }
+        }
+    }
+    &__cart {
+        font-family: 'Libre Franklin', sans-serif;
+        position: relative;
+        font-size: 14px;
+        line-height: 143%;
+        color:#000;
+        position: relative;
+        &::after{
+        content:'';
+        transition: all 0.3s ease 0s;
+        position: absolute;
+        background: #797171;
+        width:0%;
+        height:1px;
+        bottom:0%;
+        left:50%;
+        transform: translateX(-50%);
+        }
+        &::before{
+        content:'';
+        position: absolute;
+        background: url(/img/header/01.svg) center/auto no-repeat;
+        width:18.6px;
+        height:20px;
+        top: 0;
+        left:-23px;
+        }
+        &:hover{
+            color:#353030;
+            transition: all 0.3s ease 0s;
+        }
+}
+}
