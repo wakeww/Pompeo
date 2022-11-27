@@ -306,7 +306,7 @@ body {
 .menu-header__cart::before {
   content: "";
   position: absolute;
-  background: url(/img/header/01.svg) center/auto no-repeat;
+  background: url(../img/header/01.svg) center/auto no-repeat;
   width: 18.6px;
   height: 20px;
   top: 0;
